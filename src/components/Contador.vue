@@ -8,7 +8,7 @@
     <p>{{ numero }} <sup>2</sup>={{ obtenerCubo() }}</p>
     <div>
       <button v-on:click="incrementar()">+</button>
-      <button @:click="incrementar()">-1</button>
+      <button @:click="decrementar()">-1</button>
       <button v-show="mostrar">prueba</button>
     </div>
   </div>
