@@ -10,9 +10,17 @@
     <button v-on:click="imprimirNombre()">Imprimir Nombre</button>
     <button v-on:click="agregarEstudiante()">Agregar estudiante</button>
     <h1>{{ arreglo[0] }}</h1>
+    
+    <br>
+    <label for="id_nombre_1">Nombre</label>
+    <input v-model="nombre" id="id_nombre_1" type="text">
+
+    <label for="id_apellido_1">Apellido</label>
+    <input v-model="apellido" v-on:keypress.enter="agregarEstudiante1" id="id_apellido_1" type="text">
 
     <ul>
-      <li v-show="nombre" v-for="{ nombre, apellido } in arreglo" :key="nombre">
+      <li v-show="nombre" v-for="{ nombre, apellido } in arreglo" 
+      :key="nombre">
         {{ nombre }} - {{ apellido }}
       </li>
     </ul>
@@ -49,6 +57,23 @@ export default {
   methods: {
     imprimirNombre() {
       console.log(this.nombre);
+    },
+    agregarEstudiante1(event) {
+      if (event.charCode !== 13) {
+        return;
+      }
+      console.log("presiono el ENTER");
+      console.log("Se agrega estudiante 1");
+      console.log(event);
+      console.log(event.charCode);
+      
+      const estu = {
+        nombre: this.nombre,
+        apellido: this.apellido,
+      };
+      console.log(estu);
+      this.arreglo.push(estu);
+      this.limpiarFormulario();
     },
     agregarEstudiante() {
       const estu = {
