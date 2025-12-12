@@ -18,5 +18,8 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-}
+    }
+    h2{
+      font-size: 50px;
+    }
 </style>
