@@ -1,6 +1,6 @@
 <template>
   <div>
-    <img v.if="imagen" :src="imagen" alt="No se puede ver"/>
+     <!--<img v.if="imagen" :src="imagen" alt="No se puede ver"/>-->
     <div class="oscuro"></div>
     <div class="pregunta-container">
       <input v-model="pregunta" type="text" placeholder="Hazme una pregunta" />
@@ -47,7 +47,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 img,
 .oscuro {
   height: 100vh;

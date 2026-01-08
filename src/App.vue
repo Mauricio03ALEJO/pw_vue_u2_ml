@@ -1,24 +1,26 @@
 <template>
   <div>
-    <!----<ContadorView />-->
-    <!---<DirectivasView />-->
-    <PreguntaView />
+    <!--<ContadorView />-->
+    <!--<DirectivasView />-->
+    <!--<PreguntaView />-->
+    <PokemonView />
   </div>
 </template>
 
 <script>
-import ContadorView from '../src/views/ContadorView.vue';
-import DirectivasView from './views/DirectivasView.vue';
-import PreguntaView from './views/PreguntaView.vue';
+import ContadorView from "../src/views/ContadorView.vue";
+import DirectivasView from "../src/views/DirectivasView.vue";
+import PokemonView from "./views/PokemonView.vue";
+import PreguntaView from "./views/PreguntaView.vue";
 export default {
   components: {
-    ContadorView, 
+    ContadorView,
     DirectivasView,
-    PreguntaView
+    PreguntaView,
+    PokemonView
   },
 };
 </script>
 
 <style>
-
 </style>
