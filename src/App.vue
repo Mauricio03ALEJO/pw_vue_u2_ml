@@ -8,8 +8,8 @@
 </template>
 
 <script>
-import ContadorView from "../src/views/ContadorView.vue";
-import DirectivasView from "../src/views/DirectivasView.vue";
+import ContadorView from "./views/ContadorView.vue";
+import DirectivasView from "./views/DirectivasView.vue";
 import PokemonView from "./views/PokemonView.vue";
 import PreguntaView from "./views/PreguntaView.vue";
 export default {
